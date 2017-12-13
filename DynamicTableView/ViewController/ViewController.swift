@@ -34,7 +34,7 @@ class ViewController: UIViewController {
     
     func AddData()
     {
-        for _ in 0...1000
+        for _ in 0...10000
         {
             Data_Array.append(DataDetail.init(Image_URL: "https://cloud.netlifyusercontent.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/68dd54ca-60cf-4ef7-898b-26d7cbe48ec7/10-dithering-opt.jpg", Name: "asdkfnaskldnfaksldjfbasdjnfmlasdf", ImageDetail: "asdkfnaskldnfaksldjfbasdjnfmlasdfasdkfnaskldnfaksldjfbasdjnfmlasdfasdkfnaskldnfaksldjfbasdjnfmlasdf"))
             Data_Array.append(DataDetail.init(Image_URL: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv1pQ9HgpfllwxL_xyfEI3b1y4unD--GemO9DeAfQQ5Sw7Ya07", Name: "wqefsadvndfosodhfjnsadkmvnmknaonosokdjflkasndflsndlfnlsandflasndfsadf", ImageDetail: "asdsadasd"))
