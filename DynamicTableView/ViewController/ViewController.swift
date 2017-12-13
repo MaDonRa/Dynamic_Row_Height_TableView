@@ -79,7 +79,7 @@ extension ViewController: UITableViewDataSource {
             
         }
         
-        cell.setPostedImage(image: image) // Dynamic TableView only use cache images or Local Image. Can't use image from URL.
+        cell.setPostedImage(image: image) 
         
         return cell
     }
