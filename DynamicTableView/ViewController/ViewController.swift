@@ -69,7 +69,7 @@ extension ViewController: UITableViewDataSource {
         cell.DetailLabel.text = data.ImageDetail
         cell.PhotoImageView.image = nil
 
-        guard let image = self.Model.Cahce_Image[data.Image_URL] else {
+        guard let image = self.Model.Cahce_Image.object(forKey: NSString(string: data.Image_URL)) else {
             
             Model.Fetch_Image(Image_URL: data.Image_URL) { (image) in
                 tableView.reloadRows(at: [indexPath], with: UITableViewRowAnimation.none)
@@ -79,7 +79,7 @@ extension ViewController: UITableViewDataSource {
             
         }
         
-        cell.setPostedImage(image: image) 
+        cell.setPostedImage(image: image)
         
         return cell
     }
