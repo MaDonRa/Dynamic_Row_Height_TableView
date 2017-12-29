@@ -14,7 +14,7 @@ class Model_API: NSObject {
     
     private let Fetch : FetchDataDelegate = FetchModel()
     
-    public var Cahce_Image:NSCache = NSCache<NSString , UIImage>()
+    lazy public var Cahce_Image:NSCache = NSCache<NSString , UIImage>()
     
     func Fetch_Image(Image_URL : String , completion:@escaping (UIImage)->())
     {

@@ -22,7 +22,7 @@ class FetchModel : FetchDataDelegate {
         let task = URLSession.shared.dataTask(with: (UseCacheIfHave ? URLRequest(url: link_url, cachePolicy: URLRequest.CachePolicy.returnCacheDataElseLoad, timeoutInterval: 30) : URLRequest(url: link_url, cachePolicy: URLRequest.CachePolicy.reloadIgnoringLocalAndRemoteCacheData , timeoutInterval: 30))) {
             (data, response, error) -> Void in
             
-            guard error == nil , let statusCode = (response as? HTTPURLResponse)?.statusCode , statusCode == 200 , data != nil  else {
+            guard error == nil , (response as? HTTPURLResponse)?.statusCode == 200 , data != nil  else {
 
                 print("Check Internet Connection not return [200] : \(error.debugDescription)")
                 

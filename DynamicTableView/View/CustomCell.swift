@@ -38,6 +38,7 @@ class CustomCell: UITableViewCell {
     
     override func prepareForReuse() {
         super.prepareForReuse()
+        PhotoImageView.image = nil
         aspectConstraint = nil
     }
     
